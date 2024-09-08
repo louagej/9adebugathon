@@ -1,7 +1,5 @@
 # 9A Debugathon
 
-# 9A Debugathon
-
 ![debugathon](img/10803122_bandit_criminal_robber_bug_code_icon.png)
 
 On September 10, 2024, we threw a debugathon for Business Central.
