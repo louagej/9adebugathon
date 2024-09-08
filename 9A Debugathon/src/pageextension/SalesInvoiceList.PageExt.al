@@ -5,8 +5,10 @@
 pageextension 50000 "PTE_Sales Invoice List" extends "Sales Invoice List"
 {
     trigger OnOpenPage();
+    var
+        SetUserFilterMeth: Codeunit "PTE_SetUserFilter Meth";
     begin
-        Rec.FilterGroup(2);
+        SetUserFilterMeth.SetUserFilter(Rec);
     end;
 }
 
