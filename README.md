@@ -1,13 +1,16 @@
-# AL-Go Per Tenant Extension Template
+# 9A Debugathon
 
-This template repository can be used for managing AppSource Apps for Business Central.
+![debugathon](img/10803122_bandit_criminal_robber_bug_code_icon.png)
 
-[![Use this template](https://github.com/microsoft/AL-Go/assets/10775043/ca1ecc85-2fd3-4ab5-a866-bd2e7e80259d)](https://github.com/new?template_name=AL-Go-PTE&template_owner=microsoft)
+On September 10, 2024, we threw a debugathon for Business Central.
 
-Please go to https://aka.ms/AL-Go to learn more.
+The goal? To help folks without a coding background get comfy with debugging in Business Central.
 
-## Contributing
+They'll learn how to pop open VS Code from the Business Central web client and kick off a debugging session like pros. 
 
-Please read [this](https://github.com/microsoft/AL-Go/blob/main/Scenarios/Contribute.md) description on how to contribute to AL-Go for GitHub.
+This way, they'll be quicker at pinpointing the root cause of user issues, whether it's data hiccups or bugs in the AL code.
 
-We do not accept Pull Requests on the template repository directly.
+
+### Top 10 Highlights from the Debugathon on September 10, 2024:
+-
+- 

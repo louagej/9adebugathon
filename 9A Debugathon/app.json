@@ -9,7 +9,7 @@
   "EULA": "",
   "help": "",
   "url": "",
-  "logo": "",
+  "logo": "logo/logo.png",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
@@ -20,9 +20,7 @@
       "to": 99999
     }
   ],
-  "features": [
-    "NoImplicitWith"
-  ],
+  "features": ["NoImplicitWith"],
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": false,
