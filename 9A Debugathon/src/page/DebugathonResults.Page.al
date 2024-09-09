@@ -16,6 +16,11 @@ page 50000 "PTE_Debugathon Results"
         {
             repeater(General)
             {
+                field("Medal"; Rec.Medal)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Medal field.', Comment = '%';
+                }
                 field("Entry No."; Rec."Entry No.")
                 {
                     ApplicationArea = All;
@@ -25,16 +30,19 @@ page 50000 "PTE_Debugathon Results"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the User ID field.', Comment = '%';
+                    Visible = false;
                 }
                 field("User Name"; Rec."User Name")
                 {
                     ApplicationArea = All;
+                    Caption = 'Name';
                     ToolTip = 'Specifies the value of the User Name field.', Comment = '%';
                 }
                 field("System Created At"; Rec.SystemCreatedAt)
                 {
                     ApplicationArea = All;
                     Editable = false;
+                    Caption = 'Finish Time';
                     ToolTip = 'Specifies the value of the System Created At field.', Comment = '%';
                 }
                 field("Time Difference"; Rec."Time Difference")

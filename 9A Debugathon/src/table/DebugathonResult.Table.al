@@ -32,6 +32,11 @@ table 50000 "PTE_Debugathon Result"
             Caption = 'Time Difference';
             ToolTip = 'The time difference between Ranking No. 1 and this result.';
         }
+        field(5; "Medal"; Text[50])
+        {
+            Caption = 'Medal';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
@@ -49,8 +54,14 @@ table 50000 "PTE_Debugathon Result"
         Clear(Rec);
         Rec."Entry No." := GetNextEntryNo();
         Rec."User ID" := CopyStr(UserId(), 1, MaxStrLen(Rec."User ID"));
-        Rec."User Name" := UserInfo."Full Name";
+        UserInfo.Reset();
+        UserInfo.SetRange("User Name", Rec."User ID");
+        if UserInfo.FindFirst() then
+            Rec."User Name" := UserInfo."Full Name"
+        else
+            Rec."User Name" := Rec."User ID";
         Rec."Time Difference" := GetDurationDifference();
+        Rec.Medal := GetMedal(Rec."Entry No.");
         Rec.Insert(true);
     end;
 
@@ -72,6 +83,20 @@ table 50000 "PTE_Debugathon Result"
         if not DebugathonResult.Get(1) then
             exit(0);
         exit(CurrentDateTime() - DebugathonResult.SystemCreatedAt);
+    end;
+
+    local procedure GetMedal(EntryNo: Integer): Text[50]
+    begin
+        case EntryNo of
+            1:
+                exit('🥇 Gold');
+            2:
+                exit('🥈 Silver');
+            3:
+                exit('🥉 Bronze');
+            else
+                exit('');
+        end;
     end;
 
 }
